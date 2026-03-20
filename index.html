@@ -6,6 +6,9 @@
     <title>Gold TSB — The Strongest Battlegrounds</title>
     
     <link rel="icon" type="image/png" href="/Assets/i-_11_.png">
+    <link rel="shortcut icon" type="image/png" href="/Assets/i-_11_.png">
+    <link rel="apple-touch-icon" href="/Assets/i-_11_.png">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
@@ -22,7 +25,7 @@
 
     <div id="globalBanner" class="global-banner hidden">
         <span id="bannerMessage"></span>
-        <button id="closeBannerBtn" onclick="closeGlobalBanner()" class="hidden">✕</button>
+        <button id="closeBannerBtn" onclick="window.GTSB.closeGlobalBanner()" class="hidden">✕</button>
     </div>
 
     <div id="banMessageContainer" class="ban-message-container hidden"></div>
@@ -51,7 +54,7 @@
                 <div class="subtitle">
                     Улучшайте уровень игры, соревнуйтесь с сильнейшими и становитесь частью сообщества Gold TSB.
                 </div>
-                <button class="btn-primary" onclick="showAuth('register')">НАЧАТЬ ИГРАТЬ</button>
+                <button class="btn-primary" onclick="window.showAuthModal('register')">НАЧАТЬ ИГРАТЬ</button>
 
                 <div class="stats-grid">
                     <div class="stat-item">
@@ -113,7 +116,7 @@
     <!-- Модальное окно авторизации -->
     <div id="authModal" class="modal hidden">
         <div class="modal-content">
-            <span class="close-modal" onclick="closeAuthModal()">&times;</span>
+            <span class="close-modal" onclick="window.closeAuthModal()">&times;</span>
             <div id="authForm"></div>
         </div>
     </div>
@@ -121,6 +124,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="/js/config.js"></script>
     <script src="/js/main.js"></script>
-    <script src="/js/auth.js"></script>
+    <!-- НЕ подключаем другие JS файлы на главной странице! -->
 </body>
 </html>
