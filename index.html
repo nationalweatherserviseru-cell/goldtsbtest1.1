@@ -1,1 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold TSB — The Strongest Battlegrounds</title>
+    
+    <link rel="icon" type="image/png" href="/Assets/i-_11_.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="shield-bg">
+        <i class="fas fa-shield-alt"></i>
+        <i class="fas fa-shield-alt"></i>
+        <i class="fas fa-shield-alt"></i>
+        <i class="fas fa-shield-alt"></i>
+        <i class="fas fa-shield-alt"></i>
+        <i class="fas fa-shield-alt"></i>
+    </div>
 
+    <div id="globalBanner" class="global-banner hidden">
+        <span id="bannerMessage"></span>
+        <button id="closeBannerBtn" onclick="closeGlobalBanner()" class="hidden">✕</button>
+    </div>
+
+    <div id="banMessageContainer" class="ban-message-container hidden"></div>
+
+    <div class="app">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <div class="site-avatar" onclick="location.href='/'">
+                    <img src="/Assets/i-_11_.png" alt="Gold TSB">
+                </div>
+                <div class="logo" onclick="location.href='/'">GOLD TSB</div>
+            </div>
+            <div class="nav-links">
+                <a href="/">НОВОСТИ</a>
+                <a href="/forum.html">ФОРУМ</a>
+                <a href="/users.html">USERS</a>
+                <a href="/rules.html">ПРАВИЛА</a>
+                <a href="/admin.html" id="adminTabLink" style="display: none;">ADMIN</a>
+            </div>
+            <div class="user-area" id="userArea"></div>
+        </nav>
+
+        <div id="content">
+            <div class="hero">
+                <h1>БРОСЬТЕ<br>ВЫЗОВ <span>СЕБЕ</span></h1>
+                <div class="subtitle">
+                    Улучшайте уровень игры, соревнуйтесь с сильнейшими и становитесь частью сообщества Gold TSB.
+                </div>
+                <button class="btn-primary" onclick="showAuth('register')">НАЧАТЬ ИГРАТЬ</button>
+
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" id="accountCounter">0+</div>
+                        <div class="stat-label">АККАУНТОВ</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modes-grid">
+                <div class="mode-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>CLASSIC</h3>
+                    <p>Классический режим для настоящих ценителей. Чистый геймплей без лишних правил.</p>
+                </div>
+                <div class="mode-card">
+                    <i class="fas fa-sword"></i>
+                    <h3>DUELS</h3>
+                    <p>Проверь себя в дуэлях. Сразись с соперником 1 на 1 или найди напарника для дуэлей 2 на 2.</p>
+                    <div class="mode-badges">
+                        <span class="mode-badge">1x1</span>
+                        <span class="mode-badge">2x2</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="games-section">
+                <h2>ИГРАЙ В ЛЮБИМЫЕ РЕЖИМЫ <span>GOLD TSB</span></h2>
+                <p>От классических дуэлей до рейтинговых сражений — соревновательная платформа Gold TSB дает лучший игровой опыт.</p>
+                <div class="game-icons">
+                    <div class="game-icon" onclick="location.href='/'">
+                        <i class="fas fa-newspaper"></i>
+                        <span>НОВОСТИ</span>
+                    </div>
+                    <div class="game-icon" onclick="location.href='/forum.html'">
+                        <i class="fas fa-comments"></i>
+                        <span>ФОРУМ</span>
+                    </div>
+                    <div class="game-icon" onclick="location.href='/users.html'">
+                        <i class="fas fa-users"></i>
+                        <span>USERS</span>
+                    </div>
+                    <div class="game-icon" onclick="location.href='/rules.html'">
+                        <i class="fas fa-gavel"></i>
+                        <span>ПРАВИЛА</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <a href="/">НОВОСТИ</a>
+            <a href="/forum.html">ФОРУМ</a>
+            <a href="/users.html">USERS</a>
+            <a href="/rules.html">ПРАВИЛА</a>
+        </div>
+    </div>
+
+    <!-- Модальное окно авторизации -->
+    <div id="authModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeAuthModal()">&times;</span>
+            <div id="authForm"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/js/config.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/auth.js"></script>
+</body>
+</html>
