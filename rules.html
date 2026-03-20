@@ -1,1 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Правила - Gold TSB</title>
+    
+    <link rel="icon" type="image/png" href="/Assets/i-_11_.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .rules-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        .rules-header {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .rules-header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #ff8c00;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 20px rgba(255, 140, 0, 0.3);
+        }
+        
+        .rules-header .subtitle {
+            color: #b0b0b0;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .rules-header::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: #ff8c00;
+            margin: 30px auto 0;
+            box-shadow: 0 0 10px #ff8c00;
+        }
+        
+        .rules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .rule-card {
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            padding: 30px;
+            transition: 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .rule-card:hover {
+            transform: translateY(-5px);
+            border-color: #ff8c00;
+            box-shadow: 0 10px 30px rgba(255, 140, 0, 0.1);
+        }
+        
+        .rule-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background: #ff8c00;
+            transition: 0.2s;
+        }
+        
+        .rule-card:hover::before {
+            height: 100%;
+        }
+        
+        .rule-icon {
+            font-size: 2.5rem;
+            color: #ff8c00;
+            margin-bottom: 20px;
+        }
+        
+        .rule-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ff8c00;
+            margin-bottom: 15px;
+        }
+        
+        .rule-description {
+            color: #b0b0b0;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        .rule-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+        
+        .rule-list li {
+            color: #b0b0b0;
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 0.95rem;
+        }
+        
+        .rule-list li::before {
+            content: '•';
+            color: #ff8c00;
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+        
+        .warning-section {
+            background: #2a1a1a;
+            border: 2px solid #ff4d4f;
+            padding: 40px;
+            margin: 50px 0;
+            text-align: center;
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 77, 79, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 77, 79, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 77, 79, 0); }
+        }
+        
+        .warning-section h2 {
+            color: #ff4d4f;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+            border-left: none;
+            padding-left: 0;
+        }
+        
+        .signature {
+            text-align: right;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #2a2a2a;
+            color: #888;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .rules-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .rules-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .warning-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="shield-bg">
+        <i class="fas fa-shield-alt"></i>
+        <i class="fas fa-shield-alt"></i>
+        <i class="fas fa-shield-alt"></i>
+        <i class="fas fa-shield-alt"></i>
+        <i class="fas fa-shield-alt"></i>
+        <i class="fas fa-shield-alt"></i>
+    </div>
 
+    <div class="app">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <div class="site-avatar" onclick="location.href='/'">
+                    <img src="/Assets/i-_11_.png" alt="Gold TSB">
+                </div>
+                <div class="logo" onclick="location.href='/'">GOLD TSB</div>
+            </div>
+            <div class="nav-links">
+                <a href="/">НОВОСТИ</a>
+                <a href="/forum.html">ФОРУМ</a>
+                <a href="/users.html">USERS</a>
+                <a href="/rules.html" class="active">ПРАВИЛА</a>
+                <a href="/admin.html" id="adminTabLink" style="display: none;">ADMIN</a>
+            </div>
+            <div class="user-area" id="userArea"></div>
+        </nav>
+
+        <div class="rules-container">
+            <div class="rules-header">
+                <h1>ПРАВИЛА СООБЩЕСТВА</h1>
+                <div class="subtitle">Чтобы сохранить порядок и комфорт, ознакомьтесь с правилами</div>
+            </div>
+
+            <div class="rules-grid">
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="rule-title">Уважение к участникам</div>
+                    <div class="rule-description">
+                        Относитесь с уважением ко всем участникам сообщества.
+                    </div>
+                    <ul class="rule-list">
+                        <li>Запрещены оскорбления и унижения</li>
+                        <li>Никакого буллинга или травли</li>
+                        <li>Уважайте чужое мнение</li>
+                    </ul>
+                </div>
+
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                    <div class="rule-title">Запрещенный контент</div>
+                    <div class="rule-description">
+                        На сайте строго запрещены определенные материалы.
+                    </div>
+                    <ul class="rule-list">
+                        <li>Порнография и NSFW контент</li>
+                        <li>Призывы к насилию</li>
+                        <li>Реклама наркотических веществ</li>
+                        <li>Распространение вирусов</li>
+                    </ul>
+                </div>
+
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="rule-title">Мошенничество и скам</div>
+                    <div class="rule-description">
+                        Любые попытки обмана строго наказываются.
+                    </div>
+                    <ul class="rule-list">
+                        <li>Запрещены финансовые пирамиды</li>
+                        <li>Запрещен обман пользователей</li>
+                        <li>Фейковые аккаунты и разводы</li>
+                    </ul>
+                </div>
+
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="rule-title">Спам и флуд</div>
+                    <div class="rule-description">
+                        Не засоряйте общий чат бесполезными сообщениями.
+                    </div>
+                    <ul class="rule-list">
+                        <li>Запрещена массовая рассылка</li>
+                        <li>Не флудите в комментариях</li>
+                        <li>Реклама без разрешения</li>
+                    </ul>
+                </div>
+
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <div class="rule-title">Использование багов</div>
+                    <div class="rule-description">
+                        Найденные ошибки нужно сообщать администрации.
+                    </div>
+                    <ul class="rule-list">
+                        <li>Запрещено использовать баги для наживы</li>
+                        <li>Сообщайте о найденных ошибках</li>
+                        <li>Не распространяйте баги публично</li>
+                    </ul>
+                </div>
+
+                <div class="rule-card">
+                    <div class="rule-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="rule-title">Прочее</div>
+                    <div class="rule-description">
+                        Прочие правила.
+                    </div>
+                    <ul class="rule-list">
+                        <li>Запрещено создавать мультиаккаунты для обхода бана</li>
+                        <li>Если вы создали аккаунт - это только ваш аккаунт. Вы не должны давать доступ к своему аккаунту кому либо.</li>
+                        <li>Запрещены любые попытки взлома сайта</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="warning-section">
+                <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: #ff4d4f; margin-bottom: 20px;"></i>
+                <h2>НАРУШЕНИЕ ПРАВИЛ</h2>
+                <p style="color: #ffb0b0; font-size: 1.1rem; max-width: 700px; margin: 0 auto;">За серьезные нарушения правил вы можете получить бан по IP адресу или бан по железу. Длительность бана зависит от тяжести нарушения и определяется администрацией.</p>
+            </div>
+
+            <div class="signature">
+                <p>Последнее обновление: <strong style="color: #ff8c00; font-style: normal;">15 марта 2026 г.</strong></p>
+                <p>С уважением, администрация <strong style="color: #ff8c00; font-style: normal;">Gold TSB</strong></p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <a href="/">НОВОСТИ</a>
+            <a href="/forum.html">ФОРУМ</a>
+            <a href="/users.html">USERS</a>
+            <a href="/rules.html">ПРАВИЛА</a>
+        </div>
+    </div>
+
+    <div id="authModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeAuthModal()">&times;</span>
+            <div id="authForm"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/js/config.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/auth.js"></script>
+</body>
+</html>
